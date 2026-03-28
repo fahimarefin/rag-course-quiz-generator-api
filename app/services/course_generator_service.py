@@ -93,6 +93,7 @@ REQUIREMENTS:
     except json.JSONDecodeError as e:
         raise ValueError(f"Invalid JSON from GPT: {e}. Raw response: {raw[:500]}")
 
+    # Ensure it's a dict with the expected structure
     if not isinstance(module, dict):
         raise ValueError(f"Expected module dict, got {type(module)}")
     
