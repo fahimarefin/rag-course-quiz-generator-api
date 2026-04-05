@@ -17,10 +17,7 @@ class VoiceStatus(str, Enum):
 # ── Sub-document models ────────────────────────────────────────────────────────
 
 class VoiceModel(BaseModel):
-    """
-    Stores TTS audio metadata for a single module.
-    Audio files are saved at: static/audio/{session_id}/module_{n}.mp3
-    """
+
     voice_id: str = Field(..., description="Unique voice job ID e.g. VOX-XXXXXXXXXX")
     generated_at: Optional[str] = Field(None, description="ISO timestamp of TTS generation")
     audio_url: Optional[str] = Field(None, description="Relative URL path to the .mp3 file")
