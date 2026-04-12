@@ -14,8 +14,6 @@ class VoiceStatus(str, Enum):
     FAILED     = "failed"
 
 
-# ── Sub-document models ────────────────────────────────────────────────────────
-
 class VoiceModel(BaseModel):
     """
     Stores TTS audio metadata for a single module.
