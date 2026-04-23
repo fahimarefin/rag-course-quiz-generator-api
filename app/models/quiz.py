@@ -26,7 +26,10 @@ class QuizQuestionModel(BaseModel):
 
 
 class QuizAnswerModel(BaseModel):
-  
+    """
+    A single user answer document stored in Quiz_answer table.
+    Records the user's selected answer for a specific question.
+    """
     unique_user_id: str = Field(..., description="User ID who submitted this answer")
     unique_session_id: str = Field(..., description="Session ID from Course_lecture_generator")
     question_id: str = Field(..., description="Question ID this answer corresponds to")
